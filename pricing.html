@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News Insight - Pricing</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* Header Styles from index.html */
+    header {
+      background-color: #00246B;
+      color: #CADCFC;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: fixed;
+      width: 100%;
+      height: 40px;
+      top: 0;
+      z-index: 1000;
+      padding: 10px 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+      padding: 5px 10px;
+      border-radius: 15px;
+    }
+
+    .nav-links a:hover {
+      color: #ffdd57;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links .active {
+      color: #ffdd57;
+      font-weight: bold;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Existing pricing styles with adjustments */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .header-content {
+      text-align: center;
+      padding: 100px 20px 40px; /* Adjusted padding-top to account for fixed header */
+      background-color: #00246B;
+      color: white;
+    }
+
+    .header-content h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    .header-content p {
+      margin-top: 10px;
+      font-size: 1.2em;
+    }
+
+    .pricing-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .pricing-card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+      width: calc(25% - 30px);
+      padding: 30px;
+      transition: transform 0.3s ease;
+    }
+    .pricing-card:hover {
+      transform: translateY(-5px);
+    }
+    .pricing-card h2 {
+      text-align: center;
+      color: #0073e6;
+      font-size: 1.8em;
+      margin-top: 0;
+    }
+    .price {
+      font-size: 2em;
+      color: #0073e6;
+      text-align: center;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+    .pricing-card ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin-bottom: 30px;
+    }
+    .pricing-card ul li {
+      margin-bottom: 15px;
+      position: relative;
+      padding-left: 25px;
+    }
+    .pricing-card ul li::before {
+      content: "✔";
+      color: #0073e6;
+      position: absolute;
+      left: 0;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 12px 0;
+      background-color: #0073e6;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #005bb5;
+    }
+    .premium {
+      border-top: 4px solid #ffcc00;
+    }
+    .enterprise .price {
+      font-size: 1.5em;
+    }
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+    }
+    @media (max-width: 1200px) {
+      .pricing-card {
+        width: calc(50% - 30px);
+      }
+    }
+    @media (max-width: 768px) {
+      .pricing-card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- New header from index.html -->
+  <header>
+    <nav>
+      <div class="logo">News Insight</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="pricing.html" class="active">Pricing</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Renamed from header to header-content -->
+  <div class="header-content">
+    <h1>Pricing Plans</h1>
+    <p>Choose the plan that suits your needs and enjoy exclusive features to stay informed.</p>
+  </div>
+
+  <section class="pricing-container">
+    <!-- Free Plan -->
+    <div class="pricing-card">
+      <h2>Free Plan</h2>
+      <p class="price">$0/month</p>
+      <ul>
+        <li>Access to limited articles per month</li>
+        <li>Basic news categories</li>
+        <li>Standard reading experience (with ads)</li>
+      </ul>
+      <button class="btn">Sign Up for Free</button>
+    </div>
+
+    <!-- Premium Plan -->
+    <div class="pricing-card premium">
+      <h2>Premium Plan</h2>
+      <p class="price">$9.99/month</p>
+      <ul>
+        <li>Unlimited access to all articles</li>
+        <li>Ad-free reading experience</li>
+        <li>Exclusive premium content</li>
+        <li>Access to archives</li>
+        <li>Monthly curated newsletter</li>
+      </ul>
+      <button class="btn">Go Premium</button>
+    </div>
+
+    <!-- Pro Plan -->
+    <div class="pricing-card">
+      <h2>Pro Plan</h2>
+      <p class="price">$19.99/month</p>
+      <ul>
+        <li>All Premium Plan features</li>
+        <li>Early access to breaking news</li>
+        <li>Personalized recommendations</li>
+        <li>Priority customer support</li>
+        <li>Downloadable PDFs of articles</li>
+      </ul>
+      <button class="btn">Subscribe to Pro</button>
+    </div>
+
+    <!-- Enterprise Plan -->
+    <div class="pricing-card enterprise">
+      <h2>Enterprise Plan</h2>
+      <p class="price">Custom Pricing</p>
+      <ul>
+        <li>Unlimited access for teams</li>
+        <li>Customizable news dashboards</li>
+        <li>Dedicated account manager</li>
+        <li>API access for integration</li>
+      </ul>
+      <button class="btn">Contact for Enterprise</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    © 2024 News Insight | All Rights Reserved
+  </footer>
+</body>
+</html>

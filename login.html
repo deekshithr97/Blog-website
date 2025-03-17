@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - News Insight</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Login Page Specific Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f4f4f9 0%, #e8eaf6 100%);
+        }
+
+        .login-section {
+            max-width: 1200px;
+            margin: 100px auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .login-info {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .login-info h1 {
+            font-size: 2.5rem;
+            color: #00246B;
+            margin-bottom: 20px;
+        }
+
+        .login-info p {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            color: #333;
+        }
+
+        .features-list i {
+            color: #007bff;
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .login-container {
+            flex: 1;
+            max-width: 400px;
+            background: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .login-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #007bff, #00246B);
+            border-radius: 20px 20px 0 0;
+        }
+
+        .login-form .input-group {
+            margin-bottom: 20px;
+        }
+
+        .login-form label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .login-form input {
+            width: 100%;
+            padding: 12px 15px 12px 40px;
+            border: 2px solid #e1e1e1;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .login-form input:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+            outline: none;
+        }
+
+        .input-group {
+            position: relative;
+        }
+
+        .input-group i {
+            position: absolute;
+            left: 15px;
+            top: 45px;
+            color: #666;
+        }
+
+        .login-form button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(90deg, #007bff, #00246B);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .login-form button:hover {
+            transform: translateY(-2px);
+        }
+
+        .social-login {
+            text-align: center;
+            margin-top: 30px;
+            position: relative;
+        }
+
+        .social-login::before,
+        .social-login::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 45%;
+            height: 1px;
+            background: #e1e1e1;
+        }
+
+        .social-login::before { left: 0; }
+        .social-login::after { right: 0; }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #e1e1e1;
+            color: #666;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background: #007bff;
+            border-color: #007bff;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .extra-links {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .extra-links a {
+            color: #007bff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .extra-links a:hover {
+            color: #00246B;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 968px) {
+            .login-section {
+                flex-direction: column;
+                margin: 60px auto;
+            }
+
+            .login-info {
+                text-align: center;
+                margin-bottom: 40px;
+            }
+
+            .features-list li {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">News Insight</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="login.html" class="active">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="login-section">
+        <div class="login-info">
+            <h1>Welcome to News Insight</h1>
+            <p>Join our community of informed readers and gain access to premium content, personalized news feeds, and exclusive features.</p>
+            <ul class="features-list">
+                <li><i class="fas fa-check-circle"></i> Access to premium articles and analysis</li>
+                <li><i class="fas fa-check-circle"></i> Personalized news feed based on your interests</li>
+                <li><i class="fas fa-check-circle"></i> Save articles to read later</li>
+                <li><i class="fas fa-check-circle"></i> Join discussions and comment on articles</li>
+                <li><i class="fas fa-check-circle"></i> Get breaking news notifications</li>
+            </ul>
+        </div>
+
+        <div class="login-container">
+            <h2>Sign In</h2>
+            <form class="login-form">
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit">Sign In <i class="fas fa-arrow-right"></i></button>
+            </form>
+
+            <div class="social-login">
+                <span>Or continue with</span>
+            </div>
+            
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-google"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-apple"></i></a>
+            </div>
+
+            <div class="extra-links">
+                <a href="#"><i class="fas fa-key"></i> Forgot Password?</a>
+                <a href="#"><i class="fas fa-user-plus"></i> Create Account</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

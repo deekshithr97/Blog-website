@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Insight</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">News Insight</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="featured-post">
+            <h1>Welcome to News Insight</h1>
+            <p>Discover interesting articles and stories.</p>
+        </section>
+
+        <section class="blog-posts">
+            <article class="post" data-category="Healthcare">
+                <img src="https://aihms.in/blog/wp-content/uploads/2020/05/ai1.jpg" alt="AI Healthcare">
+                <h2>The Rise of Artificial Intelligence in Healthcare</h2>
+                <div class="post-meta">
+                    <span><i class="far fa-calendar"></i> April 10, 2024</span>
+                    <span><i class="far fa-user"></i> Dr. Sarah Johnson</span>
+                </div>
+                <p>Recent breakthroughs in AI technology are revolutionizing healthcare diagnostics. Machine learning algorithms are now capable of detecting diseases with 95% accuracy, potentially saving millions of lives worldwide...</p>
+                <a href="#" class="read-more" data-article="article1">Read More</a>
+            </article>
+
+            <article class="post" data-category="Environment">
+                <img src="https://images.unsplash.com/photo-1569163139599-0f4517e36f51" alt="Climate Change">
+                <h2>Global Efforts to Combat Climate Change Intensify</h2>
+                <div class="post-meta">
+                    <span><i class="far fa-calendar"></i> April 9, 2024</span>
+                    <span><i class="far fa-user"></i> Michael Chen</span>
+                </div>
+                <p>World leaders gathered at the Climate Summit 2024 have pledged to reduce carbon emissions by 50% by 2030. New renewable energy initiatives and sustainable development projects are at the forefront of this ambitious plan...</p>
+                <a href="#" class="read-more" data-article="article2">Read More</a>
+            </article>
+
+            <article class="post" data-category="Space">
+                <img src="https://images.unsplash.com/photo-1614728894747-a83421e2b9c9" alt="Mars Exploration">
+                <h2>NASA's New Mars Mission Reveals Groundbreaking Discovery</h2>
+                <div class="post-meta">
+                    <span><i class="far fa-calendar"></i> April 8, 2024</span>
+                    <span><i class="far fa-user"></i> Alex Rivera</span>
+                </div>
+                <p>The latest Mars rover has detected traces of organic compounds that could indicate past microbial life. Scientists are calling this discovery a potential turning point in our understanding of extraterrestrial life...</p>
+                <a href="#" class="read-more" data-article="article3">Read More</a>
+            </article>
+
+            <article class="post" data-category="Technology">
+                <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb" alt="Quantum Computing">
+                <h2>Revolutionary Quantum Computing Breakthrough</h2>
+                <div class="post-meta">
+                    <span><i class="far fa-calendar"></i> April 7, 2024</span>
+                    <span><i class="far fa-user"></i> Dr. James Wilson</span>
+                </div>
+                <p>Scientists have achieved quantum supremacy with a new 1000-qubit processor. This breakthrough could transform fields from cryptography to drug discovery, marking a new era in computing technology...</p>
+                <a href="#" class="read-more" data-article="article4">Read More</a>
+            </article>
+
+            <article class="post" data-category="Business">
+                <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7" alt="Electric Vehicles">
+                <h2>Electric Vehicle Market Sees Unprecedented Growth</h2>
+                <div class="post-meta">
+                    <span><i class="far fa-calendar"></i> April 6, 2024</span>
+                    <span><i class="far fa-user"></i> Emma Thompson</span>
+                </div>
+                <p>Global electric vehicle sales have surged by 200% in the first quarter of 2024. Major automakers are ramping up production as consumer demand for sustainable transportation reaches new heights...</p>
+                <a href="#" class="read-more" data-article="article5">Read More</a>
+            </article>
+
+            <article class="post" data-category="Science">
+                <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276" alt="Renewable Energy">
+                <h2>Breakthrough in Renewable Energy Storage</h2>
+                <div class="post-meta">
+                    <span><i class="far fa-calendar"></i> April 5, 2024</span>
+                    <span><i class="far fa-user"></i> Dr. Lisa Chen</span>
+                </div>
+                <p>Researchers have developed a new type of battery that can store renewable energy for months at a fraction of the current cost. This innovation could be the key to achieving 100% renewable energy adoption...</p>
+                <a href="#" class="read-more" data-article="article6">Read More</a>
+            </article>
+        </section>
+
+        <!-- Modal for full articles -->
+        <div id="articleModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="modalContent"></div>
+            </div>
+        </div>
+    </main>
+</body>
+</html> 
